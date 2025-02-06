@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Interface Explanation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            color: #333;
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 5px;
+        }
+        .section p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About Our Interface</h1>
+    </header>
+    <main>
+        <section class="section">
+            <h2>User-Friendly Design</h2>
+            <p>Our interface is designed with simplicity in mind. It features a clean layout, intuitive navigation, and responsive design to ensure a seamless user experience across all devices.</p>
+        </section>
+
+        <section class="section">
+            <h2>Navigation Menu</h2>
+            <p>The top navigation bar provides quick access to all major sections of the application. With clearly labeled links, users can easily find what they need without confusion.</p>
+        </section>
+
+        <section class="section">
+            <h2>Interactive Elements</h2>
+            <p>Buttons, forms, and other interactive elements are designed to be accessible and easy to use. All actions are clearly labeled and provide immediate feedback to enhance usability.</p>
+        </section>
+
+        <section class="section">
+            <h2>Customizable Settings</h2>
+            <p>Users can personalize their experience through the settings menu. Options include theme selection, notification preferences, and other features to match individual needs.</p>
+        </section>
+
+        <section class="section">
+            <h2>Accessibility</h2>
+            <p>We prioritize inclusivity by incorporating accessibility features, such as keyboard navigation, screen reader compatibility, and high-contrast mode for visually impaired users.</p>
+        </section>
+    </main>
+</body>
+</html>
