@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Library</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+        }
+        .book-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+        .book-item {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            text-align: center;
+        }
+        .book-item img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .book-item h3 {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .book-item p {
+            font-size: 1em;
+            color: #555;
+        }
+        .search-bar {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .search-bar input {
+            padding: 10px;
+            font-size: 1em;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Library</h1>
+        <p>Your portal to a world of books</p>
+    </header>
+    
+    <section>
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Search for a book..." onkeyup="searchBooks()">
+        </div>
+        
+        <div class="book-list" id="bookList">
+            <div class="book-item">
+                <img src="https://m.media-amazon.com/images/I/71kxa1-0mfL.jpg" alt="Book 1">
+                <h3>The Great Adventure</h3>
+                <p>by John Doe</p>
+                <button>View Details</button>
+            </div>
+            <div class="book-item">
+                <img src="https://m.media-amazon.com/images/I/81af+MCATTL.jpg" alt="Book 2">
+                <h3>The Mystery Novel</h3>
+                <p>by Jane Smith</p>
+                <button>View Details</button>
+            </div>
+            <div class="book-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg" alt="Book 3">
+                <h3>Science in Everyday Life</h3>
+                <p>by Richard Roe</p>
+                <button>View Details</button>
+            </div>
+            <div class="book-item">
+                <img src="https://m.media-amazon.com/images/I/71kxa1-0mfL.jpg" alt="Book 4">
+                <h3>The Enchanted Forest</h3>
+                <p>by Emily Johnson</p>
+                <button>View Details</button>
+            </div>
+            <div class="book-item">
+                <img src="https://m.media-amazon.com/images/I/81QpkIctqPL.jpg" alt="Book 5">
+                <h3>Adventures in the Sky</h3>
+                <p>by James Wilson</p>
+                <button>View Details</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Library. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function searchBooks() {
+            let searchQuery = document.getElementById('search').value.toLowerCase();
+            let books = document.querySelectorAll('.book-item');
+            books.forEach(function(book) {
+                let title = book.querySelector('h3').textContent.toLowerCase();
+                if (title.includes(searchQuery)) {
+                    book.style.display = 'block';
+                } else {
+                    book.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
